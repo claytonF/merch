@@ -7,7 +7,7 @@
 1. Define my routes
 	- in 'config/routes.rb' define RESTful routes for resources
 2. generate Controller for primary resource (product)
-	- define actions for endpoints
+	- define actions for endpoints (rails generate controller products index show new edit (dont need to create controller actions for create update or destroy because we don't need the corresponding views that will be created))
 	- CRUD products
 		- read - Before I can read any data I need a Model...
 3.  Generate a model
