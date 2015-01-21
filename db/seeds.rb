@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Product.create(
+				[
+					{
+						name: 				"Earth",
+						price_in_pence: 	"5000",
+						description: 		"Watery planet populated by various species. Rich in minerals. Annoying species."
+					},
+					{
+						name: 				"Mars",
+						price_in_pence: 	"2000",
+						description: 		"Loads of rock. Bargain. Nothing to stop you."
+					}
+
+			 	]
+			 )

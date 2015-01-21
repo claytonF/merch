@@ -1,4 +1,8 @@
-<h1>Products</h1>
+<h2>Products</h2>
 
-<%= @products.inspect %>
+<% @products.each do |product| %>
+	<h3><%= product.name %></h3>
+	<p><%= product.price_in_pence %> pence!</p>
+	<p><%= product.description %></p>
+<% end %>
 
