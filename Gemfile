@@ -41,6 +41,20 @@ gem 'spring',        group: :development
 # add simple for gem 
 gem 'simple_form'
 
+#steer stylesheet injector (specifying a repo in github)
+gem 'steer', github: 'tmcdb/steer-rb'
+
+# bourbon is a sass library
+gem 'bourbon'
+
+#grid framework written in sass
+gem 'neat'
+
+# paperclip is an image manipulation gem - requires ImageMagick
+#https://github.com/thoughtbot/paperclip
+
+gem "paperclip", "~> 4.2"
+
 group :development do
 gem 'table_print'
 end
