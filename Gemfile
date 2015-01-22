@@ -38,3 +38,10 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# add simple for gem 
+gem 'simple_form'
+
+group :development do
+gem 'table_print'
+end
+
