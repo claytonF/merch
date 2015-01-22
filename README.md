@@ -29,3 +29,10 @@
 ---
 
 8. Think about other resources (users)
+
+## notes
+### what is REST (and RESTfulness)
+
+REpresentational State Transfer
+
+it is technobabble for HTTP convention expressed through server side code
