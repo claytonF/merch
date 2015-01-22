@@ -1,5 +1,5 @@
 <h2><%= @product.name %></h2>
 
 <p><%= @product.description %></p>
-<p>£<%= @product.price_in_pence / 100 %></p>
+<p>£<%= (@product.price_in_pence).to_f / 100 %></p>
 
