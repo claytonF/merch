@@ -30,6 +30,22 @@
 
 8. Think about other resources (users)
 
+9. add paperclip gem for image uploads
+
+# creating users and authentication
+
+10. generate user model
+
+11. run migration
+
+12. seed users
+
+13. generate controller
+
+14. add foreign key to products
+
+15. set up associations between users and products
+
 ## notes
 ### what is REST (and RESTfulness)
 
