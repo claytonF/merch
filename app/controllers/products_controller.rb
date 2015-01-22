@@ -47,7 +47,7 @@ class ProductsController < ApplicationController
   private
   def product_params
   	#whitelisted form data
-  	params.require(:product).permit(:name, :description, :price_in_pence)
+  	params.require(:product).permit(:name, :description, :price_in_pence, :image)
   end
 
   def find_product

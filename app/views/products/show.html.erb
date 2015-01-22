@@ -1,5 +1,6 @@
 <h2><%= @product.name %></h2>
 
+<%= image_tag @product.image.url(:medium) %>
 <p><%= @product.description %></p>
 <p>£<%= (@product.price_in_pence).to_f / 100 %></p>
 
