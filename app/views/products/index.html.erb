@@ -1,14 +1,16 @@
 <h2>Products</h2>
 
 <% @products.each do |product| %>
-	<h3><%= product.name %></h3>
-	<p><%= product.price_in_pence %> pence!</p>
-	<p><%= product.description %></p>
-	<div class="actions">
-		<!-- if logged in AND user is owner of product -->
-		<%= link_to "edit", edit_product_path(product) %>
-		<%= link_to "delete", product_path(product), method: :delete %>
-		<!-- end -->
-	</div>
+	<section class="product">
+		<h3><%= product.name %></h3>
+		<p><%= product.price_in_pence %> pence!</p>
+		<p><%= product.description %></p>
+		<div class="actions">
+			<!-- if logged in AND user is owner of product -->
+			<%= link_to "edit", edit_product_path(product) %>
+			<%= link_to "delete", product_path(product), method: :delete %>
+			<!-- end -->
+		</div>
+	</section>
 <% end %>
 

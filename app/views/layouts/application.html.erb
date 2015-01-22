@@ -7,20 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-	<nav>
-		<ul>
-			<li><%= link_to "home", root_path %></li>
-			<!-- only show the 'new' link if logged in -->
-			<!-- if logged in ... -->
-				<li><%= link_to "new planet", new_product_path %></li>
-			<!-- else link to log in  -->
-				<li><%= link_to "log in", "" %></li>
-			<!-- end -->
-		</ul>
-	</nav>
-</header>
-<%= yield %>
-
+<div id="container">
+	<header>
+		<nav>
+			<ul>
+				<li><%= link_to "home", root_path %></li>
+				<!-- only show the 'new' link if logged in -->
+				<!-- if logged in ... -->
+					<li><%= link_to "new planet", new_product_path %></li>
+				<!-- else link to log in  -->
+					<li><%= link_to "log in", "" %></li>
+				<!-- end -->
+			</ul>
+		</nav>
+	</header>
+	<% flash.each do |key,value| %>
+		<p class="<%= key %>"><%= value %></p>
+	<% end %>
+	<%= yield %>
+</div>
 </body>
 </html>

@@ -16,8 +16,10 @@ class ProductsController < ApplicationController
   def create
   	@product = Product.new(product_params)
   	if @product.save
+  		flash[:success] = "a new product was successfully created."
   		redirect_to product_path(@product)
   	else
+  		flash[:error] = "Sorry. There was a problem, please try again."
   		render:new
   	end
   end
@@ -26,9 +28,20 @@ class ProductsController < ApplicationController
   end
 
   def update
+  	if @product.update(product_params)
+  		flash[:success] = "'#{@product.name}' was updated."
+  		redirect_to product_path(@product)
+  	else
+  		flash[:error] = "Something went wrong. Please check the form and try again."
+  		render :edit
+  	end
   end
 
   def destroy
+  	@product.destroy
+  	flash[:success] = "'@product.name' was deleted."
+  	@product = nil
+  	redirect_to root_path
   end
 
   private
