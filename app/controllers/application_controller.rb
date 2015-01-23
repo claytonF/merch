@@ -14,11 +14,29 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  # check if current user is logged in
   def current_user?
   	current_user.present?
   end
 
+  # for actions that require user be logged in
+  def require_user
+    unless current_user?
+      flash[:error] = "you must be logged in to do that."
+      redirect_to new_session_path and return 
+    end
+  end
 
+  # define action that checks for users 
+  # and makes sure the user owns something
+  def require_owner
+    # check for current user
+    current_user?
+    # look for belongings - requires relationship between products and users - foreign key in product table
+
+
+
+  end
 
 end
 

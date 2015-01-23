@@ -10,18 +10,14 @@ class ProductsController < ApplicationController
   end
 
   def new
-
     # only logged in users
-    if current_user.present?
-  	   @product = Product.new
-    else
-      flash[:error] = "You need to be loggined in to do this"
-      redirect_to new_session_path
-    end
+    require_user
+  	@product = Product.new
   end
 
   def create
-    # only logged in users
+    # only logged in users - require user is in app controller
+    require_user
   	@product = Product.new(product_params)
   	if @product.save
   		flash[:success] = "a new product was successfully created."
@@ -33,6 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    require_user
     # only logged in users and user is owner
   end
 

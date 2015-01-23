@@ -103,6 +103,7 @@ a
 .product
   +media($smallMobilesAndUp)
     float: left
+    position:relative
     +span-columns(12)
     margin-bottom: 10px
     padding-bottom: 10px
@@ -118,15 +119,13 @@ a
   +clearfix
 
   .info
+    position:relative
     text-align: center
     font-size: 10px
     +media($smallMobilesAndUp)
       margin: 20px
     small
-      float: left
-      position: relative
-      left: -30px
-      top: -70px
+      position:absolute
       cursor: pointer
       background: $white
       +transition(none)
