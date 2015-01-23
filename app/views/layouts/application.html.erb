@@ -10,15 +10,23 @@
 <div class="border"></div>
 
 <header>
-	<nav>
-	<%= link_to "home", root_path %></li>
-<!-- only show the 'new' link if logged in -->
-<!-- if logged in ... -->
-	<%= link_to "new planet", new_product_path %></li>
-<!-- else link to log in  -->
-	<%= link_to "log in", new_session_path %></li>
-			<!-- end -->	
-	</nav>
+	<%= link_to root_path do %>
+		<h1>Home</h1>
+	<% end %>
+	<!-- only show the 'new' link if logged in -->
+	<!-- if logged in ... -->
+	<div class="user-actions">
+		<% if current_user? %>
+			<%= link_to current_user.email, user_path(current_user) %>
+			<%= link_to "new planet", new_product_path %>
+			<%= link_to "log out", session_path, method: :delete %>
+		<% else %>
+			<!-- else link to log in  -->
+			<%= link_to "log in", new_session_path %>
+		<% end %>
+	</div>
+
+	
 </header>
 <% flash.each do |key,value| %>
 	<p class="<%= key %>"><%= value %></p>

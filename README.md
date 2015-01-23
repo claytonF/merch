@@ -33,8 +33,9 @@
 9. add paperclip gem for image uploads
 
 # creating users and authentication
+# session control belongs to application controller - the parent of all other controllers
 
-10. generate user model
+10. generate user model - rails generate user email password_digest
 
 11. run migration
 
