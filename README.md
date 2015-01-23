@@ -43,7 +43,9 @@
 
 13. generate controller
 
-14. add foreign key to products
+14. add foreign key to products - using rails generate migration add_user_id_to_products user_id:index - will make sure the column is an index which makes DB lookups quicker
+
+
 
 15. set up associations between users and products
 

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # this makes the method available to the view
-  helper_method :current_user, :current_user?
+  helper_method :current_user, :current_user?, :user_owns?
 
   # look for user using session data
   def current_user
@@ -27,15 +27,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # define action that checks for users 
-  # and makes sure the user owns something
-  def require_owner
-    # check for current user
-    current_user?
-    # look for belongings - requires relationship between products and users - foreign key in product table
-
-
-
+  def user_owns?(product)
+    product.user == current_user
   end
 
 end

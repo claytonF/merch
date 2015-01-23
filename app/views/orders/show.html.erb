@@ -1,0 +1,8 @@
+<h1>Thanks for purchasing <%= @product.name %></h1>
+<h2>Your order will be dispatched within two working days</h2>
+<p>Shipping address: <%= @order.delivery_address %></p>
+<p>Your account will be debited: £<%= @product.price_in_pence / 100 %></p>
+<%= link_to "Continue browsing", root_path %>
+
+
+
